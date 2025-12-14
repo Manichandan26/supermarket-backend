@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Manage Products</h1>
+    <a href="index.html" class="btn">🏠 Home</a>
+
+    <div class="form-container">
+        <h3>Add / Update Product</h3>
+
+        <input type="hidden" id="product_id">
+
+        <input id="name" placeholder="Product Name" required>
+        <input id="price" type="number" placeholder="Price" required>
+        <input id="stock" type="number" placeholder="Stock" required>
+
+        <button class="btn" onclick="saveProduct()">Save Product</button>
+    </div>
+
+    <h2>Product List</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+<script src="js/products.js"></script>
+</body>
+</html>

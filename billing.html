@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Bill</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Create New Bill</h1>
+    <a href="index.html" class="btn">🏠 Home</a>
+
+    <div class="form-container">
+        <label>Customer ID:</label>
+        <input id="customer_id" type="number" placeholder="Enter Customer ID">
+
+        <label>Select Product:</label>
+        <select id="productSelect"></select>
+
+        <label>Quantity:</label>
+        <input id="quantity" type="number" min="1">
+
+        <button class="btn" onclick="addItem()">Add Item</button>
+    </div>
+
+    <h2>Bill Items</h2>
+    <table id="billTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Total Bill: ₹<span id="totalAmount">0</span></h2>
+
+    <button class="btn" onclick="generateBill()">Generate Bill</button>
+
+<script src="js/billing.js"></script>
+
+</body>
+</html>
